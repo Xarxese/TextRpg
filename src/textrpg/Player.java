@@ -62,12 +62,14 @@ public class Player extends Character {
         return items.stream().filter(i -> name.equals(i.name))
                 .findAny().orElse(new Item(name, 0));
     }
+    
     public void setWeapon(Weapon weapons) {
         if (equipement.getWeapons()!= null) {
             items.add(equipement.getWeapons());
         }
         equipement.setWeapons(weapons);
     }
+
     public void setArmor(Armor armors) {
         if (equipement.getArmor()!= null) {
             items.add(equipement.getArmor());
